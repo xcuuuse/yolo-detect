@@ -1,6 +1,7 @@
 .venv311/
 .venv/
 .idea/
+__pycache__/
 output.mp4
 yolo26l.pt
 yolo26m.pt
