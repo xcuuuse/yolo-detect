@@ -2,7 +2,8 @@
 .venv/
 .idea/
 __pycache__/
-data/
+data/output_with_boxes.mp4
+data/output.mp4
 yolo26l.pt
 yolo26m.pt
 yolo26n-cls.pt
