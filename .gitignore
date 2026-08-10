@@ -14,3 +14,5 @@ yolo26x-pose.pt
 yolo26x.pt
 yolo26n.pt
 yolo26l-pose.pt
+
+count.py
