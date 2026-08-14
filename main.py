@@ -1,5 +1,4 @@
 import time
-
 import cv2
 import json
 from ultralytics import YOLO
@@ -12,7 +11,6 @@ def detect_people(path: str, model_name: str, device: str):
     if fps == 0 or fps is None:
         fps = 30
     frame_step = int(fps * 10)
-
     results_data = {}
     current_frame = 0
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -20,7 +18,6 @@ def detect_people(path: str, model_name: str, device: str):
     max_failures = 300
     total_inference_time = 0
     processed_frames = 0
-
     while cap.isOpened():
         if current_frame % frame_step == 0:
             success, frame = cap.read()
@@ -61,15 +58,14 @@ def detect_people(path: str, model_name: str, device: str):
             break
 
     cap.release()
-    avg_inference = total_inference_time / processed_frames if processed_frames > 0 else 0
+    average_inference = total_inference_time / processed_frames if processed_frames > 0 else 0
     results_data["metrics"] = {
         "total_inference_time_sec": round(total_inference_time, 3),
-        "average_time_per_frame_sec": round(avg_inference, 4),
-        "frames_processed": processed_frames
+        "average_time_per_frame_sec": round(average_inference, 4)
     }
     return results_data
 
-
+    
 def main():
     current_model = 'yolo26x.pt'
     current_device = 'cpu'

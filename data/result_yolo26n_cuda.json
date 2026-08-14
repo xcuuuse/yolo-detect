@@ -181,7 +181,6 @@
     "1783s": 0,
     "metrics": {
         "total_inference_time_sec": 10.809,
-        "average_time_per_frame_sec": 0.0601,
-        "frames_processed": 180
+        "average_time_per_frame_sec": 0.0601
     }
 }
